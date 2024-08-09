@@ -1,14 +1,22 @@
 {
   "name": "@zq/configs",
+  "type": "module",
   "version": "0.0.1",
   "description": "Ziqiang frontend shared configs. Includes eslint, prettier, commitlint etc.",
   "main": "index.js",
   "exports": {
-    "./eslint": "./src/eslint/index.mjs",
-    "./prettier": "./src/prettier/index.mjs"
+    "./eslint": "./dist/eslint/index.js",
+    "./prettier": "./dist/prettier/index.js",
+    "./tsconfig/*": "./src/tsconfig/*.json"
   },
+  "files": [
+    "dist",
+    "src/tsconfig"
+  ],
   "scripts": {
-    "lint": "eslint ./src",
+    "build": "tsup --format esm,cjs --clean --dts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Saltro",
@@ -24,9 +32,12 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
-    "@zq/configs": "files:./",
+    "@types/eslint__js": "^8.42.3",
+    "@zq/configs": "link:",
     "eslint": "^9.8.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
   },
   "prettier": "@zq/configs/prettier"
 }

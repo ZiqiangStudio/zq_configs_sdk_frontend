@@ -1,5 +1,6 @@
-import { config } from './src/eslint/index.mjs';
+import { config } from '@zq/configs/eslint';
 
 export default config({
   vue: false,
+  ts: true,
 });

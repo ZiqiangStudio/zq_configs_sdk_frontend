@@ -1,4 +1,6 @@
-export const config = {
+import { Config } from 'prettier';
+
+export const config: Config = {
   // 一行最多 80 字符
   printWidth: 80,
   // 使用 2 个空格缩进

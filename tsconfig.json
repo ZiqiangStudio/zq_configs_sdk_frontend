@@ -1,0 +1,4 @@
+{
+  "extends": "@zq/configs/tsconfig/base",
+  "include": ["src/**/*"]
+}

@@ -1,25 +1,47 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
+// @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import sonarjs from 'eslint-plugin-sonarjs';
 
-/**
- * @typedef ZqEslintConfigOptions
- * @prop {boolean} [vue=true] 是否开启 Vue
- * @prop {boolean} [ts=false] 是否开启 TypeScript
- * @prop {boolean} [sonar=true] 是否开启 sonarjs
- * @prop {boolean} [prettier=true] 是否开启 Prettier
- * @prop {boolean} [autoImport=true] 是否开启 unplugin-auto-import 插件
- * @prop {string[]} [ignores=[]]
- */
+export interface ZqEslintConfigOptions {
+  /**
+   * 是否开启 Vue
+   * @default true
+   */
+  vue?: boolean;
+  /**
+   * 是否开启 TypeScript
+   * @default false
+   */
+  ts?: boolean;
 
-/**
- * @param {ZqEslintConfigOptions} [options={}]
- */
-export const config = (options = {}) => {
+  /**
+   * 是否开启 sonarjs
+   * @default true
+   */
+  sonar?: boolean;
+  /**
+   * 是否开启 Prettier
+   * @default true
+   */
+  prettier?: boolean;
+  /**
+   * 是否开启 unplugin-auto-import 插件
+   * @default false
+   */
+  autoImport?: boolean;
+  /**
+   * 忽略列表
+   * @default []
+   */
+  ignores?: string[];
+}
+
+export const config = (options: ZqEslintConfigOptions = {}) => {
   const {
     ts = false,
     vue = true,
@@ -28,21 +50,17 @@ export const config = (options = {}) => {
     ignores = [],
   } = options;
 
-  const languageOptions =
-    ts && vue
-      ? {
-          parser: vueParser,
-          parserOptions: {
-            parser: tseslint.parser,
-            sourceType: 'module',
-          },
-        }
-      : {};
-
   const vueConfig = ts
     ? [
         ...pluginVue.configs['flat/essential'],
         {
+          languageOptions: {
+            parser: vueParser,
+            parserOptions: {
+              parser: tseslint.parser,
+              sourceType: 'module',
+            },
+          },
           rules: {
             'vue/multi-word-component-names': 0,
           },
@@ -69,7 +87,6 @@ export const config = (options = {}) => {
     },
     {
       languageOptions: {
-        ...languageOptions,
         globals: {
           ...globals.browser,
         },
