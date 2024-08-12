@@ -7,6 +7,7 @@
   "exports": {
     "./eslint": "./dist/eslint/index.js",
     "./prettier": "./dist/prettier/index.js",
+    "./commitlint": "./dist/commitlint/index.js",
     "./tsconfig/*": "./src/tsconfig/*.json"
   },
   "files": [
@@ -17,11 +18,13 @@
     "build": "tsup --format esm,cjs --clean --dts",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Saltro",
   "license": "ISC",
   "dependencies": {
+    "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -32,12 +35,21 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/cz-commitlint": "^19.4.0",
+    "@commitlint/types": "^19.0.3",
     "@types/eslint__js": "^8.42.3",
     "@zq/configs": "link:",
+    "commitizen": "^4.3.0",
     "eslint": "^9.8.0",
     "prettier": "^3.3.3",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
-  "prettier": "@zq/configs/prettier"
+  "prettier": "@zq/configs/prettier",
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
 }
