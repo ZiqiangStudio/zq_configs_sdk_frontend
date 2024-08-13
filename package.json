@@ -19,7 +19,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "commit": "git-cz",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest"
   },
   "author": "Saltro",
   "license": "ISC",
@@ -39,11 +39,16 @@
     "@commitlint/cz-commitlint": "^19.4.0",
     "@commitlint/types": "^19.0.3",
     "@types/eslint__js": "^8.42.3",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.2.0",
     "@zq/configs": "link:",
     "commitizen": "^4.3.0",
+    "cross-env": "^7.0.3",
     "eslint": "^9.8.0",
+    "jest": "^29.7.0",
     "load-json-file": "^7.0.1",
     "prettier": "^3.3.3",
+    "ts-jest": "^29.2.4",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
