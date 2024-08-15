@@ -1,5 +1,5 @@
 {
-  "name": "@zq/configs",
+  "name": "@zqstudio/configs",
   "type": "module",
   "version": "0.0.1",
   "description": "Ziqiang frontend shared configs. Includes eslint, prettier, commitlint etc.",
