@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JS Lint 报错 1`] = `
+"[0m[0m
+[0m[4m/Users/bytedance/dev/zq_configs_sdk_frontend/src/eslint/__tests__/js/error.cjs[24m[0m
+[0m   [2m1:66[22m  [31merror[39m  Replace \`"../config")\` with \`'../config');\`                                                 [2mprettier/prettier[22m[0m
+[0m   [2m5:21[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m   [2m6:50[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m   [2m7:53[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m   [2m9:23[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m10:21[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m12:31[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m18:45[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m22:6[22m   [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m23:5[22m   [31merror[39m  Remove this conditional structure or edit its code blocks so that they're not all the same  [2msonarjs/no-all-duplicated-branches[22m[0m
+[0m  [2m23:41[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m24:31[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m25:58[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m26:9[22m   [31merror[39m  Unexpected constant condition                                                               [2mno-constant-condition[22m[0m
+[0m  [2m26:29[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m27:16[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m31:29[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m32:31[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m36:27[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m37:31[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m41:35[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m42:31[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m  [2m46:24[22m  [31merror[39m  Insert \`;\`                                                                                  [2mprettier/prettier[22m[0m
+[0m[0m
+[0m[31m[1m✖ 23 problems (23 errors, 0 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[31m[1m  21 errors and 0 warnings potentially fixable with the \`--fix\` option.[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
+"
+`;
+
+exports[`JS Lint 正常通过 1`] = `""`;

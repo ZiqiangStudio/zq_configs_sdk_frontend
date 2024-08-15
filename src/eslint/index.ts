@@ -125,9 +125,9 @@ export const config = (options: ZqEslintConfigOptions = {}) => {
         },
       },
     },
-    ...(vue ? vueConfig : []),
     pluginJs.configs.recommended,
     ...(ts ? tseslint.configs.recommended : []),
+    ...(vue ? vueConfig : []),
     ...(prettier ? [eslintPluginPrettierRecommended] : []),
     ...(sonar ? [sonarjs.configs.recommended] : []),
   ];

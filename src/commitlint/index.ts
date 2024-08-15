@@ -7,7 +7,19 @@ const config: UserConfig = {
     'type-enum': [
       RuleConfigSeverity.Error,
       'always',
-      ['feat', 'add', 'update', 'fix', 'refactor', 'docs', 'style', 'test', 'conf', 'chore', 'release'],
+      [
+        'feat',
+        'add',
+        'update',
+        'fix',
+        'refactor',
+        'docs',
+        'style',
+        'test',
+        'conf',
+        'chore',
+        'release',
+      ],
     ],
     'scope-empty': [RuleConfigSeverity.Warning, 'always'],
     'subject-max-length': [RuleConfigSeverity.Error, 'always', 25],
@@ -47,7 +59,8 @@ const config: UserConfig = {
             emoji: '🐛',
           },
           refactor: {
-            description: '代码重构，包括优化代码性能、可读性和逻辑结构的修改。代码大幅改动而外在行为不变',
+            description:
+              '代码重构，包括优化代码性能、可读性和逻辑结构的修改。代码大幅改动而外在行为不变',
             title: 'Code Refactoring',
             emoji: '📦',
           },
@@ -58,7 +71,8 @@ const config: UserConfig = {
             emoji: '📚',
           },
           style: {
-            description: '格式修改，比如改变缩进、空格，删除多余的空行，补上漏掉的分号等。是不改变代码主体的改动',
+            description:
+              '格式修改，比如改变缩进、空格，删除多余的空行，补上漏掉的分号等。是不改变代码主体的改动',
             title: 'Styles',
             emoji: '💎',
           },
@@ -68,12 +82,14 @@ const config: UserConfig = {
             emoji: '🚨',
           },
           conf: {
-            description: '配置的修改，修改对象一般为非程序文件，或程序文件中的字符串',
+            description:
+              '配置的修改，修改对象一般为非程序文件，或程序文件中的字符串',
             title: 'Configs',
             emoji: '🔧',
           },
           chore: {
-            description: '事务性的修改，包括文件的移动归类、更换依赖库、数据库类型，以及项目对接、部署时产生的改动等',
+            description:
+              '事务性的修改，包括文件的移动归类、更换依赖库、数据库类型，以及项目对接、部署时产生的改动等',
             title: 'Chores',
             emoji: '♻️',
           },
@@ -94,10 +110,12 @@ const config: UserConfig = {
         description: '本次提交的具体内容',
       },
       isBreaking: {
-        description: '本次提交是否包括破坏性改动，导致以往部分代码/接口/写法不可用',
+        description:
+          '本次提交是否包括破坏性改动，导致以往部分代码/接口/写法不可用',
       },
       breakingBody: {
-        description: '请在此处详细描述破坏性改动的具体内容，包括遗弃写法、接口、代码的相关替代方案等',
+        description:
+          '请在此处详细描述破坏性改动的具体内容，包括遗弃写法、接口、代码的相关替代方案等',
       },
       breaking: {
         description: '请在此处简要说明做了哪些破坏性改动',
@@ -109,7 +127,8 @@ const config: UserConfig = {
         description: '请详细描述关闭的 issue 内容，包括标题、描述等',
       },
       issues: {
-        description: '请写出关闭的 issue 号，如“Close #12”、“Fixes #13, resolves #15”等',
+        description:
+          '请写出关闭的 issue 号，如“Close #12”、“Fixes #13, resolves #15”等',
       },
     },
   },

@@ -18,25 +18,33 @@ const isExecException = (e: unknown): e is ExecException => {
   return isError(e) && 'cmd' in e && typeof e.cmd === 'string';
 };
 
-const execEslint = async ({ file }: { file: string }) => {
+export const execEslint = async ({
+  dir,
+  file,
+}: {
+  dir: string;
+  file: string;
+}) => {
   const promiseExec = promisify(exec);
   const dirName = dirname(fileURLToPath(import.meta.url));
   try {
     const { stdout } = await promiseExec(
-      `npx eslint -c ${dirName}/eslint.config.js ${dirName}/${file}`,
+      `npx eslint -c ${dirName}/${dir}/eslint.config.js ${dirName}/${dir}/${file}`,
     );
-    return stdout;
+    return {
+      output: stdout,
+      error: false,
+    };
   } catch (e) {
     if (isExecException(e)) {
-      return e.stdout ?? '';
+      return {
+        output: e.stdout ?? '',
+        error: true,
+      };
     }
-    return '';
+    throw e;
   }
 };
 
-describe('Vue Lint', () => {
-  test('Vue Lint 报错', async () => {
-    const eslintOutput = await execEslint({ file: 'vue.vue' });
-    expect(eslintOutput).toMatchSnapshot();
-  });
-});
+export const curryExecEslint = (dir: string) => (file: string) =>
+  execEslint({ dir, file });
