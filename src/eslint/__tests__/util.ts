@@ -18,6 +18,10 @@ const isExecException = (e: unknown): e is ExecException => {
   return isError(e) && 'cmd' in e && typeof e.cmd === 'string';
 };
 
+const dirName = dirname(fileURLToPath(import.meta.url));
+
+const formatOutput = (output: string) => output.replaceAll(dirName, '').replace(/\s/g, ' ').replace(/\x1B\[[0-9;]*[a-zA-Z]/g, '');
+
 export const execEslint = async ({
   dir,
   file,
@@ -26,19 +30,18 @@ export const execEslint = async ({
   file: string;
 }) => {
   const promiseExec = promisify(exec);
-  const dirName = dirname(fileURLToPath(import.meta.url));
   try {
     const { stdout } = await promiseExec(
       `npx eslint -c ${dirName}/${dir}/eslint.config.js ${dirName}/${dir}/${file}`,
     );
     return {
-      output: stdout,
+      output: formatOutput(stdout),
       error: false,
     };
   } catch (e) {
     if (isExecException(e)) {
       return {
-        output: e.stdout ?? '',
+        output: formatOutput(e.stdout ?? ''),
         error: true,
       };
     }

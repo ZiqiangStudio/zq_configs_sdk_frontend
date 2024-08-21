@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Vue Lint 报错 1`] = `
-"[0m[0m
-[0m[4m/Users/bytedance/dev/zq_configs_sdk_frontend/src/eslint/__tests__/vue/error.vue[24m[0m
-[0m   [2m2:1[22m   [31merror[39m  Insert \`··\`                                                                [2mprettier/prettier[22m[0m
-[0m   [2m3:1[22m   [31merror[39m  Replace \`··<p·class="title">{title}·\` with \`····<p·class="title">{title}\`  [2mprettier/prettier[22m[0m
-[0m   [2m4:1[22m   [31merror[39m  Insert \`··\`                                                                [2mprettier/prettier[22m[0m
-[0m   [2m7:1[22m   [31merror[39m  Delete \`··\`                                                                [2mprettier/prettier[22m[0m
-[0m   [2m7:3[22m   [31merror[39m  'onMount' is not defined                                                   [2mno-undef[22m[0m
-[0m  [2m13:1[22m   [31merror[39m  Delete \`⏎\`                                                                 [2mprettier/prettier[22m[0m
-[0m  [2m17:18[22m  [31merror[39m  Insert \`;\`                                                                 [2mprettier/prettier[22m[0m
-[0m[0m
-[0m[31m[1m✖ 7 problems (7 errors, 0 warnings)[22m[39m[0m
-[0m[31m[1m[22m[39m[31m[1m  6 errors and 0 warnings potentially fixable with the \`--fix\` option.[22m[39m[0m
-[0m[31m[1m[22m[39m[0m
-"
-`;
+exports[`Vue Lint 报错 1`] = `" /vue/error.vue    2:1   error  Insert \`··\`                                                                prettier/prettier    3:1   error  Replace \`··<p·class="title">{title}·\` with \`····<p·class="title">{title}\`  prettier/prettier    4:1   error  Insert \`··\`                                                                prettier/prettier    7:1   error  Delete \`··\`                                                                prettier/prettier    7:3   error  'onMount' is not defined                                                   no-undef   13:1   error  Delete \`⏎\`                                                                 prettier/prettier   17:18  error  Insert \`;\`                                                                 prettier/prettier  ✖ 7 problems (7 errors, 0 warnings)   6 errors and 0 warnings potentially fixable with the \`--fix\` option.  "`;
 
 exports[`Vue Lint 正常通过 1`] = `""`;

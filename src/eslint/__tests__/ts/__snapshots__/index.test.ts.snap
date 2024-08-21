@@ -1,22 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TS Lint 报错 1`] = `
-"[0m[0m
-[0m[4m/Users/bytedance/dev/zq_configs_sdk_frontend/src/eslint/__tests__/ts/error.ts[24m[0m
-[0m   [2m4:10[22m  [31merror[39m  'UsersEntity' is defined but never used                                                      [2m@typescript-eslint/no-unused-vars[22m[0m
-[0m   [2m8:7[22m   [31merror[39m  'AuthService' is defined but never used                                                      [2m@typescript-eslint/no-unused-vars[22m[0m
-[0m  [2m14:18[22m  [31merror[39m  Replace \`⏎····name:·string,⏎····password:·string,⏎··\` with \`name:·string,·password:·string\`  [2mprettier/prettier[22m[0m
-[0m  [2m17:6[22m   [31merror[39m  Unexpected any. Specify a different type                                                     [2m@typescript-eslint/no-explicit-any[22m[0m
-[0m  [2m18:5[22m   [31merror[39m  Remove this conditional structure or edit its code blocks so that they're not all the same   [2msonarjs/no-all-duplicated-branches[22m[0m
-[0m  [2m26:15[22m  [31merror[39m  'password' is assigned a value but never used                                                [2m@typescript-eslint/no-unused-vars[22m[0m
-[0m  [2m37:9[22m   [31merror[39m  Insert \`,\`                                                                                   [2mprettier/prettier[22m[0m
-[0m  [2m46:8[22m   [31merror[39m  Insert \`,\`                                                                                   [2mprettier/prettier[22m[0m
-[0m  [2m47:10[22m  [31merror[39m  Unexpected any. Specify a different type                                                     [2m@typescript-eslint/no-explicit-any[22m[0m
-[0m[0m
-[0m[31m[1m✖ 9 problems (9 errors, 0 warnings)[22m[39m[0m
-[0m[31m[1m[22m[39m[31m[1m  3 errors and 0 warnings potentially fixable with the \`--fix\` option.[22m[39m[0m
-[0m[31m[1m[22m[39m[0m
-"
-`;
+exports[`TS Lint 报错 1`] = `" /ts/error.ts    4:10  error  'UsersEntity' is defined but never used                                                      @typescript-eslint/no-unused-vars    8:7   error  'AuthService' is defined but never used                                                      @typescript-eslint/no-unused-vars   14:18  error  Replace \`⏎····name:·string,⏎····password:·string,⏎··\` with \`name:·string,·password:·string\`  prettier/prettier   17:6   error  Unexpected any. Specify a different type                                                     @typescript-eslint/no-explicit-any   18:5   error  Remove this conditional structure or edit its code blocks so that they're not all the same   sonarjs/no-all-duplicated-branches   26:15  error  'password' is assigned a value but never used                                                @typescript-eslint/no-unused-vars   37:9   error  Insert \`,\`                                                                                   prettier/prettier   46:8   error  Insert \`,\`                                                                                   prettier/prettier   47:10  error  Unexpected any. Specify a different type                                                     @typescript-eslint/no-explicit-any  ✖ 9 problems (9 errors, 0 warnings)   3 errors and 0 warnings potentially fixable with the \`--fix\` option.  "`;
 
 exports[`TS Lint 正常通过 1`] = `""`;
