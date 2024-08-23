@@ -202,3 +202,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Vitepress
+*/.vitepress/dist
+*/.vitepress/cache
