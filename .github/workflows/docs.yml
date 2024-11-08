@@ -22,5 +22,5 @@ jobs:
       - run: pnpm docs:build
       - uses: actions/upload-pages-artifact@v1.0.7
         with:
-          path: 'dist'
+          path: 'docs/.vitepress/dist'
       - uses: actions/deploy-pages@v2
