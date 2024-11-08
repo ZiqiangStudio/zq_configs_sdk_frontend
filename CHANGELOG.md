@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/ZiqiangStudio/zq_configs_sdk_frontend/compare/v0.1.0...v0.2.0) (2024-11-08)
+
+
+### Features
+
+* 自动部署github pages ([335d95f](https://github.com/ZiqiangStudio/zq_configs_sdk_frontend/commit/335d95f4982f1f8dd276581db821da0a104cfdda))
+
+
+### Bug Fixes
+
+* 修复docs编译问题 ([0c31cd2](https://github.com/ZiqiangStudio/zq_configs_sdk_frontend/commit/0c31cd2d1e6e884b81097a039ede2f2aeb8ee9c7))
+
 ## 0.1.0 (2024-08-15)
 
 
