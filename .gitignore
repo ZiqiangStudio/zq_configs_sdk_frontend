@@ -206,3 +206,6 @@ dist
 # Vitepress
 */.vitepress/dist
 */.vitepress/cache
+
+# api-extractor temp files
+temp

@@ -11,23 +11,26 @@ pnpm i -D @zqstudio/configs prettier
 安装后可以参考 [Prettier 官网](https://prettier.io/docs/en/configuration#sharing-configurations) 进行配置。
 
 ::: code-group
+
 ```json [package.json]
 ...
   "prettier": "@zq/configs/prettier"
 ...
 ```
+
 ```js [prettier.config.mjs]
 import config from '@zqstudio/configs/prettier';
 
 export default config;
 ```
+
 :::
 
 ::: warning
 自强 Prettier Config 仅支持 `javascript` 格式的复用，暂不支持 `json` 格式的复用，即不支持 `.prettierrc` 格式的配置文件。
 :::
 
-之后可以添加 `format` 脚本在本地运行 Prettier，也可以使用 [ESLint](/eslint) 自动规范代码，具体可以参考 [自强 ESLint Config](/eslint)。
+之后可以添加 `format` 脚本在本地运行 Prettier，也可以使用 [ESLint](/guide/eslint) 自动规范代码，具体可以参考 [自强 ESLint Config](/guide/eslint)。
 
 ```json [package.json]
 ...
