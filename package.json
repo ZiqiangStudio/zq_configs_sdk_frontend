@@ -21,8 +21,9 @@
     "commit": "git-cz",
     "test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:build": "npm run docs:gen:api && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "docs:gen:api": "api-extractor run -l && api-documenter markdown -i etc -o docs/api"
   },
   "author": "Saltro",
   "license": "ISC",
@@ -54,6 +55,8 @@
     "@commitlint/cli": "^19.4.0",
     "@commitlint/cz-commitlint": "^19.4.0",
     "@commitlint/types": "^19.0.3",
+    "@microsoft/api-documenter": "^7.25.21",
+    "@microsoft/api-extractor": "^7.47.11",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.2.0",

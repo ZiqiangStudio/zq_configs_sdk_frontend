@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /eslint
+      link: /guide/eslint
 
 features:
   - title: 简单
@@ -25,4 +25,3 @@ features:
     icon: 🧰
     details: 支持 ESLint、Prettier、commitlint 等多种不同配置，一站式解决前端配置问题。
 ---
-

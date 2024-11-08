@@ -11,16 +11,19 @@ pnpm i -D @zqstudio/configs eslint
 之后在项目中编写 `eslint.config.mjs` 配置文件和 `lint` 脚本即可。
 
 ::: code-group
+
 ```js [eslint.config.mjs]
 import { config } from '@zqstudio/configs/eslint';
 
 export default config();
 ```
+
 ```json [package.json]
 ...
     "lint": "eslint ."
 ...
 ```
+
 :::
 
 现在在命令行中运行 `pnpm lint` 就可以检查本地代码了🎉
@@ -29,16 +32,16 @@ export default config();
 
 开启 ESLint 相关插件需要先安装对应的依赖。
 
-|插件|依赖|
-|---|---|
-|Prettier|`pnpm i -D pretter`|
-|TypeScript|`pnpm i -D typescript`|
+| 插件       | 依赖                   |
+| ---------- | ---------------------- |
+| Prettier   | `pnpm i -D pretter`    |
+| TypeScript | `pnpm i -D typescript` |
 
 ## 配置
 
 ### `config`
 
-`config` 函数用于创建一个定制化的 ESLint 配置，支持 Vue、TypeScript、Prettier、SonarJS 以及自动导入等功能。
+[`config`](/api/configs.config) 函数用于创建一个定制化的 ESLint 配置，支持 Vue、TypeScript、Prettier、SonarJS 以及自动导入等功能。
 
 ::: warning
 目前自强 ESLint 配置仅支持扁平模式（Flat Config）。
@@ -46,28 +49,11 @@ export default config();
 
 #### 参数
 
-- `options` (`ZqEslintConfigOptions`): 一个对象，包含用于定制 ESLint 配置的选项。
+- [`ZqEslintConfigOptions`](/api/configs.zqeslintconfigoptions)：一个对象，包含用于定制 ESLint 配置的选项。
 
 #### 返回值
 
 - 返回一个数组，包含 ESLint 的配置规则和插件。
-
-#### 参数类型 `ZqEslintConfigOptions`
-
-| 属性名    | 类型      | 默认值 | 描述                                                         |
-|-----------|-----------|--------|--------------------------------------------------------------|
-| vue       | boolean   | true   | 是否开启对Vue的支持。                                       |
-| ts        | boolean   | false  | 是否开启对TypeScript的支持。                                |
-| sonar     | boolean   | true   | 是否开启SonarJS插件。                                       |
-| prettier  | boolean   | true   | 是否开启Prettier插件。                                      |
-| autoImport| boolean 或 AutoImportOptions | false | 是否开启自动导入插件，或者提供自动导入的配置选项。 |
-| ignores   | string[]  | []     | 忽略检查的文件或目录列表。                                 |
-
-#### 参数类型 `AutoImportOptions`
-
-| 属性名 | 类型   | 默认值      | 描述                                   |
-|--------|--------|-------------|----------------------------------------|
-| path   | string | .eslintrc-auto-import.json | 自动导入配置文件 `.eslintrc-auto-import.json` 的位置。 |
 
 ### 示例
 

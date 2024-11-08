@@ -17,21 +17,36 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '指南', link: '/eslint' },
+      { text: '指南', link: '/guide/eslint' },
+      { text: 'API', link: '/api/configs' },
       { text: '关于自强', link: 'https://ziqiang.net.cn/#index' },
     ],
 
-    sidebar: [
-      {
-        text: '指南',
-        items: [
-          { text: 'ESLint', link: '/eslint' },
-          { text: 'Prettier', link: '/prettier' },
-          { text: 'commitlint', link: '/commitlint' },
-          { text: 'tsconfig', link: '/tsconfig' },
-        ],
-      },
-    ],
+    sidebar: {
+      '/guide/': [
+        {
+          text: '指南',
+          items: [
+            { text: 'ESLint', link: '/guide/eslint' },
+            { text: 'Prettier', link: '/guide/prettier' },
+            { text: 'commitlint', link: '/guide/commitlint' },
+            { text: 'tsconfig', link: '/guide/tsconfig' },
+          ],
+        },
+      ],
+      '/api/': [
+        {
+          text: 'ESLint',
+          items: [
+            { text: 'config', link: '/api/configs.config' },
+            {
+              text: 'ZqEslintConfigOptions',
+              link: '/api/configs.zqeslintconfigoptions',
+            },
+          ],
+        },
+      ],
+    },
 
     socialLinks: [
       {
