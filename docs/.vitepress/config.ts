@@ -6,6 +6,7 @@ const icon = '/favicon.ico';
 export default defineConfig({
   title: '自强 Configs',
   description: '自强 Studio 前端统一配置 SDK',
+  base: '/zq_configs_sdk_frontend/',
   head: [
     ['link', { rel: 'shortcut icon', href: icon }],
     ['link', { rel: 'icon', type: 'image/x-icon', href: icon }],
