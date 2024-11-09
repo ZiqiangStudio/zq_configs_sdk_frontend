@@ -10,11 +10,15 @@ pnpm i -D @zqstudio/configs @commitlint/cli
 
 之后在项目中编写 `commitlint.config.mjs` 配置文件即可。
 
+::: code-group
+
 ```js [commitlint.config.mjs]
 export default {
-  extends: ['@zq/configs/commitlint'],
+  extends: ['@zqstudio/configs/commitlint'],
 };
 ```
+
+:::
 
 commitlint 一般是在 ci 中执行的，建议根据[官方文档](https://commitlint.js.org/guides/ci-setup.html)在 ci 中进行相应的配置。
 
@@ -73,6 +77,8 @@ pnpm i -D commitizen @commitlint/cz-commitlint
 
 然后在 `package.json` 中添加 `commitizen` 配置。
 
+::: code-group
+
 ```json [package.json]
 ...
   "config": {
@@ -83,7 +89,11 @@ pnpm i -D commitizen @commitlint/cz-commitlint
 ...
 ```
 
+:::
+
 最后在本地执行 commitizen 即可。
+
+::: code-group
 
 ```json [package.json]
 ...
@@ -94,6 +104,8 @@ pnpm i -D commitizen @commitlint/cz-commitlint
   }
 ...
 ```
+
+:::
 
 ## 自强 Commit 规范参考
 

@@ -1,7 +1,6 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
-// @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';

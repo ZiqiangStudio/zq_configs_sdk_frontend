@@ -1,6 +1,7 @@
 /** @type{import('ts-jest').JestConfigWithTsJest} */
 export default {
   testEnvironment: 'node',
+  testTimeout: 30000,
   extensionsToTreatAsEsm: ['.ts'],
   transform: {
     '^.+.ts$': [

@@ -1,4 +1,4 @@
-import { config } from '@zq/configs/eslint';
+import { config } from '@zqstudio/configs/eslint';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 

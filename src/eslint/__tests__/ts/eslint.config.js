@@ -1,4 +1,4 @@
-import { config } from '@zq/configs/eslint';
+import { config } from '@zqstudio/configs/eslint';
 
 export default config({
   ts: true,

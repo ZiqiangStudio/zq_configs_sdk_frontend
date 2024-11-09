@@ -20,7 +20,12 @@ const isExecException = (e: unknown): e is ExecException => {
 
 const dirName = dirname(fileURLToPath(import.meta.url));
 
-const formatOutput = (output: string) => output.replaceAll(dirName, '').replace(/\s/g, ' ').replace(/\x1B\[[0-9;]*[a-zA-Z]/g, '');
+const formatOutput = (output: string) =>
+  output
+    .replaceAll(dirName, '')
+    .replace(/\\/g, '/')
+    .replace(/\s/g, ' ')
+    .replace(/\x1B\[[0-9;]*[a-zA-Z]/g, '');
 
 export const execEslint = async ({
   dir,

@@ -1,3 +1,3 @@
 export default {
-  extends: ['@zq/configs/commitlint'],
+  extends: ['@zqstudio/configs/commitlint'],
 };

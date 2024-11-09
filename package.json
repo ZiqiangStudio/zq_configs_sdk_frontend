@@ -5,9 +5,24 @@
   "description": "Ziqiang frontend shared configs. Includes eslint, prettier, commitlint etc.",
   "main": "index.js",
   "exports": {
-    "./eslint": "./dist/eslint/index.js",
-    "./prettier": "./dist/prettier/index.js",
-    "./commitlint": "./dist/commitlint/index.js",
+    "./eslint": {
+      "require": "./dist/eslint/index.cjs",
+      "import": "./dist/eslint/index.js",
+      "node": "./dist/eslint/index.cjs",
+      "default": "./dist/eslint/index.js"
+    },
+    "./prettier": {
+      "require": "./dist/prettier/index.cjs",
+      "import": "./dist/prettier/index.js",
+      "node": "./dist/prettier/index.cjs",
+      "default": "./dist/prettier/index.js"
+    },
+    "./commitlint": {
+      "require": "./dist/commitlint/index.cjs",
+      "import": "./dist/commitlint/index.js",
+      "node": "./dist/commitlint/index.cjs",
+      "default": "./dist/commitlint/index.js"
+    },
     "./tsconfig/*": "./src/tsconfig/*.json"
   },
   "files": [
@@ -41,38 +56,37 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^19.2.2",
-    "@eslint/js": "^9.8.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@eslint/js": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-sonarjs": "^1.0.4",
-    "eslint-plugin-vue": "^9.27.0",
-    "globals": "^15.9.0",
-    "typescript-eslint": "^8.0.1",
+    "eslint-plugin-sonarjs": "^2.0.4",
+    "eslint-plugin-vue": "^9.30.0",
+    "globals": "^15.12.0",
+    "typescript-eslint": "^8.13.0",
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/cz-commitlint": "^19.4.0",
-    "@commitlint/types": "^19.0.3",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/cz-commitlint": "^19.5.0",
+    "@commitlint/types": "^19.5.0",
     "@microsoft/api-documenter": "^7.25.21",
     "@microsoft/api-extractor": "^7.47.11",
     "@types/eslint__js": "^8.42.3",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^22.2.0",
-    "@zq/configs": "link:",
-    "commitizen": "^4.3.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.0",
+    "@zqstudio/configs": "link:",
+    "commitizen": "^4.3.1",
     "cross-env": "^7.0.3",
-    "eslint": "^9.8.0",
+    "eslint": "^9.14.0",
     "jest": "^29.7.0",
     "load-json-file": "^7.0.1",
     "prettier": "^3.3.3",
-    "ts-jest": "^29.2.4",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
-    "vitepress": "^1.3.3"
+    "ts-jest": "^29.2.5",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitepress": "^1.5.0"
   },
-  "prettier": "@zq/configs/prettier",
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
